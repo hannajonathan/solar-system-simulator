@@ -4,8 +4,8 @@ Final project for PHYS 246: Computational Physics
 
 This is a working simulation of our solar system in real time using initial conditions from NASA and time-evolving them with a 2D Euler integrator. I've created two animations: one containing the terrestrial planets and another containing all 8 planets. Snapshots of the final positions of the planets with their trajectory lines are also included:
 
-!(image)[terrestrial_planets.png]
-!(image)[all_planets.png]
+![image](terrestrial_planets.png)
+![image](all_planets.png)
 
 ## Astroquery and data formatting
 To find the initial conditions of the trajectories of our planets, I used the [astroquery](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) package to search for the data from the [JPL Horizons On-Line Ephemeris System](https://ssd.jpl.nasa.gov/horizons/) on the position and trajectory of the celestial bodies.
@@ -16,7 +16,7 @@ After grabbing the initial conditions, the simulation itself is just a simple 2-
 
 * **State Vector:** To get the position and velocity of the celestial body at its given epoch, also known as the state vector, we initialize the `Horizons` object (with the ID of the planet, the chosen origin of our coordinate system, and the start time calculated earlier) and simply call `vectors()` on it. To demonstrate the metadata given in the state vector, we print out its columns.
 
-Here, 'x/y/z' (AU) and 'vx/vy/vz' (AU/day) are the positions and velocities. This is the only information we need to begin.
+Here, 'x/y/z' (AU) and 'vx/vy/vz' (AU/day) are the positions and velocities. This is the only information we need.
 
 ## A note on acceleration and relevant constants
 
